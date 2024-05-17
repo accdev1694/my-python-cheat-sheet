@@ -1,4 +1,5 @@
 import subprocess
+import os
 
 def git_add_commit_push(commit_message):
     try:
@@ -16,7 +17,7 @@ def git_add_commit_push(commit_message):
 
 if __name__ == "__main__":
     # Prompt the user to enter the commit message
-    commit_message = input("Enter commit message: ")
+    commit_message = os.path.basename(__file__)[:-3].replace('_', ' ')
 
     # Call the function to add, commit, and push changes
     git_add_commit_push(commit_message)
