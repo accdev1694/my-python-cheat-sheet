@@ -9,7 +9,7 @@ gpa = float(input("Whats your Gpa: "))
 gpa = round(gpa)
 print(gpa, 'rounded to int')
 
-# the square brackets says optionally, you can specify the number of digits to round to
+# the square brackets says optionally, you can specify the number of decimals to round to
 price = float(input("Whats the price: "))
 price = round(price, 2)
 print(price)
