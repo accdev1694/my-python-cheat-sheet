@@ -1,4 +1,4 @@
-# we can combine or statements inside if statements, this shortens our code
+# we can combine 'and' statements inside if statements, this shortens our code
 age = int(input("How old are you? "))
 
 if age >= 13 and age <= 19:
