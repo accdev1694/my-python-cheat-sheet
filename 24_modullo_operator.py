@@ -12,7 +12,8 @@ def main():
         print("Number is odd")
         
 def is_even(x):
-    return True if x % 2 == 0 else False
+    #return True if x % 2 == 0 else False
+    return x % 2 == 0
     # this line above is termed a pythonic way of writing code
         
 main()
