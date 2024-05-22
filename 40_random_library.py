@@ -11,8 +11,5 @@ import random
 choices = random.choice(["Tail", "Head"])
 print(choices)
 
-# the shuffle module shuffles the list in question, in place
-
-print(random.shuffle(["spade", "heart", "queen"]))
 
 
