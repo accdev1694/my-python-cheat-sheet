@@ -10,7 +10,7 @@ days = [
     {"name": "Saturday", "num": "Day 7", "Weather": "Cloudy"},
 ]
 
-# here we have succeeded in using the dame fields for each key in each dictionary
+# here we have succeeded in using the same fields for each key in each dictionary
 
 # lets access the name of each dictionary
 for day in days:
