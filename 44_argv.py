@@ -5,7 +5,7 @@ import sys
 # use the sys module to access them
 
 print("my file name is", sys.argv[0])
-#print("hello, my name is", sys.argv[1])
+print("hello, my name is", sys.argv[1])
 print("-----")
 # however, if the user doesnt type in anything after the file name, there comes an error
 
