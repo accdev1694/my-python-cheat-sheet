@@ -5,8 +5,5 @@ import sys
 
 # lets us ethe cowsay module
 
-if len(sys.argv) < 2:
-    sys.exit("Too few arguments")
-elif len(sys.argv) > 2:
-    sys.exit("Too many arguments")
-ascii_art = cowsay.trex(sys.argv[1])
+if len(sys.argv) == 2:
+    cowsay.trex(sys.argv[1])
