@@ -16,4 +16,6 @@ def get_int():
 def hello(i):
     for _ in range(i):
         print("Hello")
-main()
+        
+if __name__ == "__main__":
+    main()
