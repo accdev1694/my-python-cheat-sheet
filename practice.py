@@ -1,7 +1,15 @@
-day = input("Day: ")
+import sys
+import requests
+import json
 
-match day:
-    case "1":
-        print("Monday")
-    case _:
-        print("no day")
+
+response = requests.get('https://api.coindesk.com/v1/bpi/currentprice.json').json()
+
+#print(response['bpi']['USD']['rate'])
+print(json.dumps(response, indent=2))
+    
+
+
+
+
+
