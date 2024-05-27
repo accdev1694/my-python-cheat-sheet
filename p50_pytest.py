@@ -1,7 +1,7 @@
 # because manual testing casn be so verbose, we use a module pytest
 # write code to test your code
 # principally, write your test first
-# lets explore or calculator program
+# lets explore our calculator program
 
 def main():
     x = int(input("What's x? "))
