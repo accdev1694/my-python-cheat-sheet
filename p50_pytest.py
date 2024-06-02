@@ -4,12 +4,17 @@
 # lets explore our calculator program
 
 def main():
-    x = int(input("What's x? "))
-    print("x is", square(x))
+    x = input("What's x? ")    
+    print("x -", square(x))
     
     
 def square(n):
-    return n * n
+    try:
+        n = int(n)
+        return n * n
+    except ValueError:
+        message = 'must be an int'
+        return message
 
 
 if __name__ == "__main__":

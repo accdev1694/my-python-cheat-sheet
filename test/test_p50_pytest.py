@@ -22,8 +22,11 @@ def test_zero():
     
 # you have to test strings, smaller numbers, larger numbers
 # 
-def test_str():
+'''def test_str():
     with pytest.raises(TypeError):
-        square("cat")
+        square("cat")'''
+        
+def test_str():
+    assert square("cat") == 'must be an int'
 
 
