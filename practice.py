@@ -1,51 +1,118 @@
 import random
+# guess word
+# player guess a letter in word
+# if letter in word
+    # for _ in len(range(word))
+    # guess another letter
+# else
+    # post = "|"
+    # bar = "___"    
+    # head = "0"
+    # left = "/"    
+    # right = "\"
 
-print()
-print("Welcome to the RPC game")
-print()
-play = input("Do you wanna play? y/n: ").lower()
-print('---')
 
-if play == 'y':
-    name = input("What is your name? ").title()
-    print('---')
-    count = 0
-    player_score = 0
-    robot_score = 0
-    while count < 10:
-        player = input(f"{name}, what is your choice? r/p/s: ").lower()
-        print()
-        if player in ['r', 'p', 's']:
-            robot = random.choice(['r', 'p', 's'])
+# print bar
+# print post + "  " + post
+# print "   " + head
+# print "  " + left + post + right
+# print "  " + left + post + right
+# 
+
+
+
+'''
+____
+|  |
+   o
+  /|\
+  /|\
+      
+  '''
+   
+
+start = input("Welcome, Do you want to play the hangman game? (Y/N): ").lower()
+if start == "y":
+    word = random.choice(["oloche", "gold", "almond", "oche", "comfort", "aboje"])        
+    missed = 0
+    right = 0
+    guessed_words = word[:]
+    counter = 0
+    hang_man = ["___", "|", "0", "/", "|", r"\\"]
+    while  len(word) >= 1:
+        guess = input("guess a letter in word: ").lower()        
+        if guess in word:
+            right += 1
+            matched = word.index(guess)
+            new_word = word[:matched] + word[matched+1:]
+            word = new_word[:]            
+            print("Good guess!")
+            if len(word) == 0:
+                print("YOU WON!!!")
+                break
+        else:
+            missed += 1
+            if missed == 1:
+                print("___")
+            elif missed == 2:
+                print("___")
+                print("|")
+            elif missed == 3:
+                print("____")
+                print("|", end="")
+                print("  |")
+            elif missed == 4:
+                print("____")
+                print("|", end="")
+                print("  |")
+                print("   0")
+            elif missed == 5:
+                print("____")
+                print("|", end="")
+                print("  |")
+                print("   0")  
+                print("  /")              
+            elif missed == 6:
+                print("____")
+                print("|", end="")
+                print("  |")
+                print("   0")
+                print("  /", end="")
+                print("|")
+            elif missed == 7:
+                print("____")
+                print("|", end="")
+                print("  |")
+                print("   0")
+                print("  /", end="")
+                print("|", end="")
+                print("\\")
+            elif missed == 8:
+                print("____")
+                print("|", end="")
+                print("  |")
+                print("   0")
+                print("  /", end="")
+                print("|", end="")
+                print("\\")
+                print("  /")
+            elif missed == 9:
+                print()
+                print("YOU LOST!!!")            
+                print("____")
+                print("|", end="")
+                print("  |")
+                print("   0")
+                print("  /", end="")
+                print("|", end="")
+                print("\\")
+                print("  /", end="")
+                print(" \\")
+                break  
             
-            if (player == 'r' and robot == 's') or (player == 'p' and robot == 'r') or (player == 's' and robot == 'p'):
-                count += 1
-                player_score += 1
-                print(f"<<<-----One for {name}----->>>")
-                print()
-            elif (robot == 'r' and player == 's') or (robot == 'p' and player == 'r') or (robot == 's' and player == 'p'):
-                count += 1
-                robot_score += 1
-                print("xxx-----One for the ROBOT-----xxx")
-                print()
-            else:
-                print("|||-----Tie-----|||")
-                print()
+         
                 
-                
-                
-    print('**************')
-    print("Game Over!!!")
-    if player_score > robot_score:
-        print(f"{name} Won!")
-        print(f"{name} scored {player_score} points")
-        print(f"Robot scored {robot_score} points")
-    elif player_score < robot_score:
-        print(f"{name} Lost!")
-        print(f"{name} scored {player_score} points")
-        print(f"Robot scored {robot_score} points")
-    else:
-        print("Its a tie!")
-        print(f"{name} scored {player_score} points")
-        print(f"Robot scored {robot_score} points")
-    print('**************')
+            
+    print("The correct word was", guessed_words)
+
+
