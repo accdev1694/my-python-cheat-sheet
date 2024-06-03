@@ -10,6 +10,6 @@ for _ in range(5):
 with open("names.txt", "a") as file:    
     for name in sorted(names):
         file.write(f"{name}\n")
-    file.close()
+    
 # if there is more code undeerneath not indented, 
 # the file gets closed automatically
