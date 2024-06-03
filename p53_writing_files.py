@@ -8,5 +8,5 @@ for _ in range(5):
 
 file = open("names.txt", "w")
 for name in sorted(names):
-    file.write(name, end)
+    file.write(name)
 file.close()
