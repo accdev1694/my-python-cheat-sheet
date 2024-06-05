@@ -2,6 +2,7 @@
 # you can sort the content as well
 
 
-with open("names.txt", "r") as file:    
+with open("names.txt") as file:
     for line in sorted(file):
-        print("Hello", line.rstrip())
+        line = line.upper()
+        print(f"Welcome, {line.strip()}")

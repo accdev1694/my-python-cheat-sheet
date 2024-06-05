@@ -45,7 +45,7 @@ if start == "y":
             right += 1
             matched = word.index(guess)
             new_word = word[:matched] + word[matched+1:]
-            word = new_word[:]            
+            word = new_word[:]           
             print("Good guess!")
             if len(word) == 0:
                 print("YOU WON!!!")
