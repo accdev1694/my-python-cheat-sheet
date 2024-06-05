@@ -9,5 +9,10 @@ with open('names.csv') as file:
         student = {'name': name, 'location':location}
         students.append(student)
         
-for student in students:
+def get_name(student):
+    return student['name']
+        
+for student in sorted(students, key=get_name):
     print(student['name'], 'is in', student['location'])
+    
+#you may sort by name, location, in reverse or otherwise, as well
