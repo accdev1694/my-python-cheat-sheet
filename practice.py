@@ -1,9 +1,17 @@
-values = []
-for x in range(5):
-    values.append(x * 2)
-print(values)
+sentence = "This is a common interview question"
+print(sentence)
 
-print()
+frequency = 0
+frequent_letter = ''
 
-values = [char*2 for char in range(5)]
-print(values)
+for letter in sentence:
+    if sentence.count(letter) > frequency:
+        frequency = sentence.count(letter)
+        frequent_letter = letter
+        
+print(frequency, frequent_letter)
+
+
+
+
+
