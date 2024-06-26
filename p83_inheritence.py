@@ -6,14 +6,14 @@ class Staff():
         self.name = name
         
 class Manager(Staff):
-    
     def working(self):
-        return "is Working!"
+        return f"{self.name} is Working!"
+    
     def not_working(self):
-        return "is not working!!!"   
+        return f"{self.name} is not Working!!!" 
         
 manager1 = Manager("Gabs")
 manager2 = Manager("Dan")
-print(f"{manager1.name} {manager1.working()}")
-print(f"{manager2.name} {manager1.not_working()}")
+print(manager1.working())
+print(manager1.not_working())
 
