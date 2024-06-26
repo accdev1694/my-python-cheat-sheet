@@ -27,7 +27,7 @@ class Car:
 
 
 # notice you dont need to pass self in the argument
-car1 = Car("BMW", 2025, "Blue", )
+car1 = Car("BMW", 2025, "Blue")
 car2 = Car("Mustang", 2026, "Green")
 print()
 print('-----------')
