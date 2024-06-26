@@ -6,13 +6,15 @@ class Birds():
     legs = 2
     wings = 2
 
+
+# instance attributes
     def __init__(self, type, color, gender):
         self.type = type
         self.color = color
         self.gender = gender
 
 
-        # instance parameters
+# new objects from the Birds class
 bird1 = Birds("Chicken", "White", "Female")
 bird2 = Birds("Dove", "Grey", "Male")
 
@@ -20,8 +22,8 @@ print(bird1.legs)
 print(bird2.legs)
 
 # we can modify the class parameters
-
 Birds.legs = 4
+
 # notice how it changes
 print()
 print(bird1.legs)
