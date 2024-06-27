@@ -1,3 +1,5 @@
+# lets look at more method comparison operators
+
 class Numbers():
     def __init__(self, x):
         self.x = x
@@ -21,4 +23,3 @@ print(num1 > num2, 'expects True')
 print(num1 < num2, 'expects False')
 print(num1 == num2, 'expects False')
 print(num1 != num2, 'expects True')
-
